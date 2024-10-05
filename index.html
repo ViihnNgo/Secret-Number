@@ -8,9 +8,25 @@
 
     <body>
         <script>
+            // Declaring variables and fetching user input for their guess
             var secretNum = 4;
             var guess = prompt("What is your favorite number?");
-            
+
+            // Checking to see if user input is a number
+            if (Number.isInteger(guess) == false) {
+                document.write("Error. That is not a number")
+                return;
+            }
+
+            // If user guesses secret number they will get 10 points, if not they don't
+            if (guess == secretNum) {
+                score += 10;
+                document.write("You guessed the secret number! Congratulations!")
+            } 
+            else {
+                document.write("Sorry, that was the wrong number");
+            }
+
         </script>
     </body>
 
