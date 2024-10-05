@@ -11,27 +11,28 @@
             // Declaring variables and fetching user input for their guess
             var secretNum = 4;
             var score = 0;
-            var guess = prompt("What is your favorite number?");
 
             // Using a loop so we can break it depending on user input
             while (true) {
-                //If user input is not an integer we break the loop
+                var guess = prompt("What is your favorite number?");
+                
                 if (isNaN(guess)) {
-                    alert("Error. That is not a number");
-                    document.write("Please try again");   
-                    break;
+                    alert("Error. That is not a number. Please try again");
+                    continue;
                 } 
-         
-                if (guess == secretNum) {
-                    document.write("You guessed the secret number! Congratulations! You've earned 10 points!");
-                    score += 10;
-                    break;
-                }
                 else {
-                    document.write("Sorry, that was not the secret number. You got no points");
                     break;
                 }
+
             }
+            if (guess == secretNum) {
+                document.write("You guessed the secret number! Congratulations! You've earned 10 points!");
+                score += 10;
+            }
+            else {
+                document.write("Sorry, that was not the secret number. You got no points");
+            }
+            
 
         </script>
     </body>
